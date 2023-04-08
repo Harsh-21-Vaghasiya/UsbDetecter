@@ -4,6 +4,16 @@ import subprocess
 from dataclasses import dataclass
 from typing import Callable, List
 
+# !Data Class function
+@dataclass
+class drive:
+    letter:str
+    disk_name:str
+    drive_type:str
+@property
+def is_removable(self)->bool:
+    return self.drive_type=='Removable Disk'
+
 # ! continuels run this program
 # subprocess.Popen(["python", "new.py"], stdout=subprocess.PIPE)
 
