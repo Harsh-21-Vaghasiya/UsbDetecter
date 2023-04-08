@@ -30,6 +30,7 @@ from typing import Callable, List
 
 
 def list_drives():
+    #!  subprocess to run powershell command in python
     proc = subprocess.run(
         args=[
             'powershell',
