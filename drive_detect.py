@@ -46,11 +46,11 @@ def list_drives():
     }
 
     devices = json.loads(proc.stdout)
-    for d in devices:
-        print("Drive_Letter :- {0} Drive_name :- {1} Drive_Type :- {2}".format(
-            d['deviceid'], d['volumename'], drive_types[d['drivetype']]), sep='\n')
+    # for d in devices:
+    #     print("Drive_Letter :- {0} Drive_name :- {1} Drive_Type :- {2}".format(
+    #         d['deviceid'], d['volumename'], drive_types[d['drivetype']]), sep='\n')
         
-        return[Drive(
+    return[Drive(
             letter=d['deviceid'],
             disk_name=d['volumename'],
             drive_type=drive_types[d['drivetype']]
